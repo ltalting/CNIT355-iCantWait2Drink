@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:divider="?android:attr/listDivider"
+    android:orientation="vertical"
+    android:showDividers="middle"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't blow it"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/bobbyts_logo" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/brothers_logo" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/cactus_logo_trans" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/harrys_logo" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/whereelse_logo" />
+
+</LinearLayout>
