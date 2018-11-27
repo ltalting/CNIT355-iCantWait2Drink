@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView bobbyImg;
+    ImageView bobbyImg,brotherImg,cactusImg,harryImg,whereElseimg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bobbyImg = findViewById(R.id.bobby);
+        brotherImg = findViewById(R.id.brothers);
+        cactusImg = findViewById(R.id.cactus);
+        harryImg = findViewById(R.id.harrys);
+        whereElseimg = findViewById(R.id.whereElse);
+
         bobbyImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
