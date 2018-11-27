@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BobbT">
+    tools:context=".Brothers">
 
     <TextView
         android:id="@+id/textView"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="Bobby T's Campus Bar"
+        android:text="Brothers Bar &amp; Grill"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -31,7 +31,7 @@
         android:background="#274F8B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/bobby_ts" />
+        app:srcCompat="@drawable/brothers_img" />
 
     <TextView
         android:id="@+id/textView2"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
-        android:text="308 W State St,"
+        android:text="306 W State St,"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -101,7 +101,7 @@
         android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
         android:layout_marginTop="48dp"
-        android:text="Call Bobby T's"
+        android:text="Call Brothers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -129,4 +129,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
 </android.support.constraint.ConstraintLayout>
