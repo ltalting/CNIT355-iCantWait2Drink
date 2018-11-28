@@ -35,7 +35,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="#274F8B"
-                android:src="@drawable/bobby_ts"
+                android:src="@drawable/harrys_img"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
