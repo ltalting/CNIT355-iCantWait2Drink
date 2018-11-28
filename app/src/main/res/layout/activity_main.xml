@@ -9,7 +9,7 @@
     android:showDividers="middle"
     tools:context=".MainActivity">
 
-<<<<<<< HEAD
+
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:background="@android:color/background_light"
         android:scaleType="fitStart"
         app:srcCompat="@drawable/bobbyts_logo" />
-=======
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -393,7 +393,7 @@
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
->>>>>>> 1eadbbaaba5e55f4fb1c8389a9ab06af069520a8
+
 
     <ImageButton
         android:id="@+id/imageButton8"
