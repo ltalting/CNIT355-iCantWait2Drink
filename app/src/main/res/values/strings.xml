@@ -4,15 +4,25 @@
     <string name="bobbyTitle">Bobby T\'s Campus Bar</string>
     <string name="bobbyAddr">308 W State St, West Lafayette, IN 47906</string>
     <string name="wait">Wait Time:</string>
+    <string name="currentWait">Current Wait</string>
     <string name="waitHours">0 hours</string>
+    <string name="hours">hours</string>
+    <string name="mins">mins</string>
     <string name="waitMins">0 mins</string>
     <string name="brothersTitle">Brothers Bar &amp; Grill</string>
     <string name="brothersAddr">306 W State St, West Lafayette, IN 47906</string>
+    <string name="brothersAddrTwoLines">306 W State St,\nWest Lafayette, IN 47906</string>
     <string name="cactusTitle">Neon Cactus</string>
     <string name="cactusAddr">360 Brown St, West Lafayette, IN 47906</string>
+    <string name="cactusAddrTwoLines">360 Brown St,\nWest Lafayette, IN 47906</string>
     <string name="harrysTitle">Harry\'s Chocolate Shop</string>
-    <string name="harrysAddress">329 W State St, West Lafayette, IN 47906</string>
+    <string name="harrysAddr">329 W State St, West Lafayette, IN 47906</string>
+    <string name="harrysAddrTwoLines">329 W State St,\nWest Lafayette, IN 47906</string>
     <string name="whereElseTitle">Where Else Bar</string>
     <string name="whereElseAddr">135 S. Chauncey Ave, West Lafayette, IN 47906</string>
+    <string name="whereElseAddrTwoLines">135 S. Chauncey Ave,\nWest Lafayette, IN 47906</string>
     <string name="callBrothers">Call Brother\'s</string>
+    <string name="maps">Open Location in Maps</string>
+    <string name="timer">Start Wait Timer</string>
+    <string name="callBobby">Call Bobby T\'s</string>
 </resources>
