@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BobbT" />
-        <activity android:name=".Brothers"></activity>
+        <activity android:name=".BobbyTsActivity" />
+        <activity android:name=".BrothersActivity"></activity>
     </application>
 
 </manifest>

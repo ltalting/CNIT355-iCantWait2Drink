@@ -4,435 +4,394 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:divider="?android:attr/listDivider"
+    android:divider="?android:attr/dividerVertical"
     android:orientation="vertical"
     android:showDividers="middle"
     tools:context=".MainActivity">
 
-
-    <ImageButton
-        android:id="@+id/imageButton4"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bobbys_const"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/background_light"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/bobbyts_logo" />
+        android:background="#7f274f8b">
 
-    <LinearLayout
+        <ImageView
+            android:id="@+id/imgBobbyTs"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="#274F8B"
+            android:scaleType="centerInside"
+            android:src="@drawable/bobbyts_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblBobbyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bobbyTitle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblBobbyAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bobbyAddr"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyTitle" />
+
+        <TextView
+            android:id="@+id/lblBobbyWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
+
+        <TextView
+            android:id="@+id/lblBobbyHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBobbyWait"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
+
+        <TextView
+            android:id="@+id/lblBobbyMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBobbyHours"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/brothers_const"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/main_bkgd"
-        android:orientation="vertical">
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/bobbys_const"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/bobby"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#274F8B"
-                android:src="@drawable/harrys_img"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Bobby T's Campus Bar"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/bobby"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="308 W State St, West Lafayette, IN 47906"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/bobby"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Wait Time:"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/bobby"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <TextView
-                android:id="@+id/bobby_wait_hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 hours"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <TextView
-                android:id="@+id/bobby_wait_mins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 mins"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/bobby_wait_hours"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/brothers_const"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/brothers"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/brothers_img"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Brothers Bar &amp; Grill"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/brothers"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="306 W State St, West Lafayette, IN 47906"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/brothers"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Wait Time:"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/brothers"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <TextView
-                android:id="@+id/brothers_wait_hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 hours"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <TextView
-                android:id="@+id/brothers_wait_mins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 mins"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/brothers_wait_hours"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/cactus_const"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/cactus"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/cactus_img"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:text="Neon Cactus"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/cactus"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="360 Brown St, West Lafayette, IN 47906"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/cactus"
-                app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Wait Time:"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/cactus"
-                app:layout_constraintTop_toBottomOf="@+id/textView28" />
-
-            <TextView
-                android:id="@+id/cactus_wait_hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 hours"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView29"
-                app:layout_constraintTop_toBottomOf="@+id/textView28" />
-
-            <TextView
-                android:id="@+id/cactus_wait_mins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 mins"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/cactus_wait_hours"
-                app:layout_constraintTop_toBottomOf="@+id/textView28" />
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/harrys_const"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/harrys"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/harrys_img"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:text="Harry's Chocolate Shop"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/harrys"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="329 W State St, West Lafayette, IN 47906"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/harrys"
-                app:layout_constraintTop_toBottomOf="@+id/textView32" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Wait Time:"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/harrys"
-                app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-            <TextView
-                android:id="@+id/harrys_wait_hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 hours"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView34"
-                app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-            <TextView
-                android:id="@+id/harrys_wait_mins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 mins"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/harrys_wait_hours"
-                app:layout_constraintTop_toBottomOf="@+id/textView33" />
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/whereElse_const"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/whereElse"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/white"
-                android:src="@drawable/where_else"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:text="Where Else Bar"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/whereElse"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="135 S. Chauncey Ave, West Lafayette, IN 47906"
-                android:textColor="@android:color/black"
-                android:textSize="13sp"
-                app:layout_constraintStart_toEndOf="@+id/whereElse"
-                app:layout_constraintTop_toBottomOf="@+id/textView37" />
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Wait Time:"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/whereElse"
-                app:layout_constraintTop_toBottomOf="@+id/textView38" />
-
-            <TextView
-                android:id="@+id/whereElse_wait_hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 hours"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView39"
-                app:layout_constraintTop_toBottomOf="@+id/textView38" />
-
-            <TextView
-                android:id="@+id/whereElse_wait_mins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="0 mins"
-                android:textColor="@android:color/black"
-                app:layout_constraintStart_toEndOf="@+id/whereElse_wait_hours"
-                app:layout_constraintTop_toBottomOf="@+id/textView38" />
-        </android.support.constraint.ConstraintLayout>
-
-    </LinearLayout>
-
-
-    <ImageButton
-        android:id="@+id/imageButton82"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="left"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/background_light"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/brothers_logo" />
+        android:background="#7fb7a500">
 
-    <ImageButton
-        android:id="@+id/imageButton7"
+        <ImageView
+            android:id="@+id/imgBrothers"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="#b7a500"
+            android:scaleType="centerInside"
+            android:src="@drawable/brothers_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblBrothersTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/brothersTitle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBrothers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblBrothersAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/brothersAddr"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgBrothers"
+            app:layout_constraintTop_toBottomOf="@+id/lblBrothersTitle" />
+
+        <TextView
+            android:id="@+id/lblBrothersWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBrothers"
+            app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
+
+        <TextView
+            android:id="@+id/lblBrothersHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBrothersWait"
+            app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
+
+        <TextView
+            android:id="@+id/lblBrothersMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBrothersHours"
+            app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cactus_const"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="left"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/background_light"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/cactus_logo_trans" />
+        android:background="#7e00950f">
 
-    <ImageButton
-        android:id="@+id/imageButton6"
+        <ImageView
+            android:id="@+id/imgCactus"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="#00950f"
+            android:scaleType="centerInside"
+            android:src="@drawable/cactus_logo_trans"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblCactusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cactusTitle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgCactus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblCactusAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cactusAddr"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgCactus"
+            app:layout_constraintTop_toBottomOf="@+id/lblCactusTitle" />
+
+        <TextView
+            android:id="@+id/lblCactusWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgCactus"
+            app:layout_constraintTop_toBottomOf="@+id/lblCactusAddr" />
+
+        <TextView
+            android:id="@+id/lblCactusHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblCactusWait"
+            app:layout_constraintTop_toBottomOf="@+id/lblCactusAddr" />
+
+        <TextView
+            android:id="@+id/lblCactusMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblCactusHours"
+            app:layout_constraintTop_toBottomOf="@+id/lblCactusAddr" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/harrys_const"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="left"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/background_light"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/harrys_logo" />
+        android:background="#4f000000">
 
-    <ImageButton
-        android:id="@+id/imageButton5"
+        <ImageView
+            android:id="@+id/imgHarrys"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="#000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/harrys_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblHarrysTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/harrysTitle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgHarrys"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblHarrysAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/harrysAddress"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgHarrys"
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysTitle" />
+
+        <TextView
+            android:id="@+id/lblHarrysWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgHarrys"
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
+
+        <TextView
+            android:id="@+id/lblHarrysHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblHarrysWait"
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
+
+        <TextView
+            android:id="@+id/lblHarrysMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblHarrysHours"
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/whereElse_const"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="left"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/background_light"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/whereelse_logo" />
+        android:background="#7eff00aa">
 
+        <ImageView
+            android:id="@+id/imgWhereElse"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="#ff00aa"
+            android:scaleType="centerInside"
+            android:src="@drawable/whereelse_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblWhereElseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/whereElseTitle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblWhereElseAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/whereElseAddr"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
+            app:layout_constraintTop_toBottomOf="@+id/lblWhereElseTitle" />
+
+        <TextView
+            android:id="@+id/lblWhereElseWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
+            app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
+
+        <TextView
+            android:id="@+id/lblWhereElseHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblWhereElseWait"
+            app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
+
+        <TextView
+            android:id="@+id/lblWhereElseMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblWhereElseHours"
+            app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>

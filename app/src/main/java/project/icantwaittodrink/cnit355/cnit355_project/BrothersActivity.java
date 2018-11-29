@@ -3,7 +3,7 @@ package project.icantwaittodrink.cnit355.cnit355_project;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Brothers extends AppCompatActivity {
+public class BrothersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

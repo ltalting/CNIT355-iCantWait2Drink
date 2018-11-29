@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7fb7a500"
     tools:context=".BrothersActivity">
 
     <android.support.constraint.ConstraintLayout
@@ -12,13 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/activity_bobby_t_bg"
-        app:layout_constraintBottom_toTopOf="@+id/imgBrothers"
+        app:layout_constraintBottom_toTopOf="@+id/imgBobbyTs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblBrothersAddress"
+            android:id="@+id/lblBrothersTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -28,7 +27,7 @@
             android:background="#7c000000"
             android:paddingEnd="8dp"
             android:paddingStart="8dp"
-            android:text="@string/brothersTitle"
+            android:text="@string/bobbyTitle"
             android:textColor="#ffffff"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -39,21 +38,21 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imgBrothers"
+        android:id="@+id/imgBobbyTs"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="100dp"
-        android:background="#b7a500"
+        android:background="#274F8B"
         android:scaleType="fitCenter"
-        android:src="@drawable/brothers_logo"
-        app:layout_constraintEnd_toStartOf="@+id/lblBrothersTitle"
+        app:layout_constraintEnd_toStartOf="@+id/lblBobbyTitle"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bobby_ts" />
 
     <TextView
-        android:id="@+id/lblBrothersTitle"
+        android:id="@+id/lblBobbyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
@@ -65,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblBrothersWait"
+        android:id="@+id/lblBobbyWait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wait Time:"
@@ -73,55 +72,55 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
+        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
 
     <TextView
-        android:id="@+id/lblBrothersHours"
+        android:id="@+id/lblBobbyHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 hours"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBrothersWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
+        app:layout_constraintStart_toEndOf="@+id/lblBobbyWait"
+        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
 
     <TextView
-        android:id="@+id/lblBrothersMins"
+        android:id="@+id/lblBobbyMins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="0 mins"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBrothersHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
+        app:layout_constraintStart_toEndOf="@+id/lblBobbyHours"
+        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
 
     <Button
-        android:id="@+id/btnCallBrothersTs"
+        android:id="@+id/btnCallBobbyTs"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
-        android:text="Call Brothers T's"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapBrothersTs"
+        android:text="Call Bobby T's"
+        app:layout_constraintBottom_toTopOf="@+id/btnMapBobbyTs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnMapBrothersTs"
+        android:id="@+id/btnMapBobbyTs"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
         android:text="Open Location in Maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerBrothersTs"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimerBobbyTs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnTimerBrothersTs"
+        android:id="@+id/btnTimerBobbyTs"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

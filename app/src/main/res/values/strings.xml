@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">CNIT355-Project</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bobbyAddrTwoLines">308 W State St,\nWest Lafayette, IN 47906</string>
+    <string name="bobbyTitle">Bobby T\'s Campus Bar</string>
+    <string name="bobbyAddr">308 W State St, West Lafayette, IN 47906</string>
+    <string name="wait">Wait Time:</string>
+    <string name="waitHours">0 hours</string>
+    <string name="waitMins">0 mins</string>
+    <string name="brothersTitle">Brothers Bar &amp; Grill</string>
+    <string name="brothersAddr">306 W State St, West Lafayette, IN 47906</string>
+    <string name="cactusTitle">Neon Cactus</string>
+    <string name="cactusAddr">360 Brown St, West Lafayette, IN 47906</string>
+    <string name="harrysTitle">Harry\'s Chocolate Shop</string>
+    <string name="harrysAddress">329 W State St, West Lafayette, IN 47906</string>
+    <string name="whereElseTitle">Where Else Bar</string>
+    <string name="whereElseAddr">135 S. Chauncey Ave, West Lafayette, IN 47906</string>
+    <string name="callBrothers">Call Brother\'s</string>
 </resources>
