@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("iCantWait2Drink");
 
         // Images
         imgBobbyTs = findViewById(R.id.imgBobbyTs);
@@ -59,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), BrothersActivity.class);
+                startActivity(intent);
+            }
+        });
+        harrys_const.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HarrysActivity.class);
                 startActivity(intent);
             }
         });

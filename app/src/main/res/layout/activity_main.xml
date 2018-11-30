@@ -364,7 +364,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/lblHarrysTitle"
+            android:id="@+id/lblHarrysAddr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -386,7 +386,7 @@
             android:text="@string/harrysAddrTwoLines"
             android:textColor="@android:color/black"
             app:layout_constraintStart_toEndOf="@+id/imgHarrys"
-            app:layout_constraintTop_toBottomOf="@+id/lblHarrysTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
 
         <TextView
             android:id="@+id/lblHarrysWait"
