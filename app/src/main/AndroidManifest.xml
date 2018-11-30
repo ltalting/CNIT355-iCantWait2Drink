@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".BobbyTsActivity" />
         <activity android:name=".BrothersActivity" />
-        <activity android:name=".HarrysActivity"></activity>
+        <activity android:name=".HarrysActivity" />
+        <activity android:name=".CactusActivity" />
+        <activity android:name=".WhereElseActivity" />
+        <activity android:name=".TimerActivity"></activity>
     </application>
 
 </manifest>

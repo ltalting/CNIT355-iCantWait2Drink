@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BrothersActivity">
+    android:background="@color/colorAccent"
+    tools:context=".CactusActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/activity_bobby_t_bg"
-        app:layout_constraintBottom_toTopOf="@+id/imgBobbyTs"
+        app:layout_constraintBottom_toTopOf="@+id/imgCactus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblBrothersTitle"
+            android:id="@+id/lblcactusTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:background="#7c000000"
-            android:paddingEnd="8dp"
             android:paddingStart="8dp"
-            android:text="@string/bobbyTitle"
+            android:paddingEnd="8dp"
+            android:text="@string/cactusTitle"
             android:textColor="#ffffff"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -38,33 +39,33 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imgBobbyTs"
+        android:id="@+id/imgCactus"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="100dp"
-        android:background="#274F8B"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/black"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/lblBobbyTitle"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/lblCactusAddr"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bobby_ts" />
+        app:srcCompat="@drawable/cactus_img" />
 
     <TextView
-        android:id="@+id/lblBobbyTitle"
+        android:id="@+id/lblCactusAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="100dp"
         android:maxLines="2"
-        android:text="@string/bobbyAddrTwoLines"
+        android:text="@string/cactusAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblBobbyWait"
+        android:id="@+id/lblCactusWait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wait Time:"
@@ -72,62 +73,64 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
 
     <TextView
-        android:id="@+id/lblBobbyHours"
+        android:id="@+id/lblCactusHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 hours"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
+        app:layout_constraintStart_toEndOf="@+id/lblCactusWait"
+        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
 
     <TextView
-        android:id="@+id/lblBobbyMins"
+        android:id="@+id/lblCactusMins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="0 mins"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
+        app:layout_constraintStart_toEndOf="@+id/lblCactusHours"
+        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
 
     <Button
-        android:id="@+id/btnCallBobbyTs"
+        android:id="@+id/btnCallCactus"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
-        android:text="Call Bobby T's"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapBobbyTs"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="8dp"
+        android:text="Call Cactus"
+        app:layout_constraintBottom_toTopOf="@+id/btnMapCactus"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnMapBobbyTs"
+        android:id="@+id/btnMapCactus"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerBobbyTs"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimerCactus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnTimerBobbyTs"
+        android:id="@+id/btnTimerCactus"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
         android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="8dp"
         android:text="Start wait timer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

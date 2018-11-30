@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bkgd"
-    tools:context=".HarrysActivity">
+    tools:context=".CactusActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/activity_bobby_t_bg"
-        app:layout_constraintBottom_toTopOf="@+id/imgHarrys"
+        app:layout_constraintBottom_toTopOf="@+id/imgWhereElse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblHarrysTitle"
+            android:id="@+id/lblWhereElseTitleTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
             android:background="#7c000000"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@string/harrysTitle"
+            android:text="@string/whereElseTitle"
             android:textColor="#ffffff"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -39,33 +39,33 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imgHarrys"
+        android:id="@+id/imgWhereElse"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:background="#ffffff"
+        android:background="@color/cardview_light_background"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/lblHarrysAddr"
+        app:layout_constraintEnd_toStartOf="@+id/lblWhereElseAddr"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/harrys_img" />
+        app:srcCompat="@drawable/where_else" />
 
     <TextView
-        android:id="@+id/lblHarrysAddr"
+        android:id="@+id/lblWhereElseAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:maxLines="2"
-        android:text="@string/bobbyAddrTwoLines"
+        android:text="@string/whereElseAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblBobbyWait"
+        android:id="@+id/lblWhereElseWait"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wait Time:"
@@ -73,56 +73,56 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
+        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
 
     <TextView
-        android:id="@+id/lblBobbyHours"
+        android:id="@+id/lblWhereElseHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 hours"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
+        app:layout_constraintStart_toEndOf="@+id/lblWhereElseWait"
+        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
 
     <TextView
-        android:id="@+id/lblBobbyMins"
+        android:id="@+id/lblWhereElseMins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="0 mins"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
+        app:layout_constraintStart_toEndOf="@+id/lblWhereElseHours"
+        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
 
     <Button
-        android:id="@+id/btnCallHarrys"
+        android:id="@+id/btnCallWhereElse"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
         android:layout_marginEnd="67dp"
         android:layout_marginBottom="8dp"
-        android:text="Call Harry's"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapHarrys"
+        android:text="Call Where Else"
+        app:layout_constraintBottom_toTopOf="@+id/btnMapWhereElse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnMapHarrys"
+        android:id="@+id/btnMapWhereElse"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
         android:layout_marginEnd="67dp"
         android:layout_marginBottom="8dp"
         android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerHarrys"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimerWhereElse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnTimerHarrys"
+        android:id="@+id/btnTimerWhereElse"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
