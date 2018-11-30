@@ -47,6 +47,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        imgHarrys.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HarrysActivity.class);
+                startActivity(intent);
+            }
+        });
+        imgCactus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CactusActivity.class);
+                startActivity(intent);
+            }
+        });
+        imgWhereElse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WhereElseActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Container onClickListeners
         bobbys_const.setOnClickListener(new View.OnClickListener() {
@@ -64,12 +86,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         harrys_const.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HarrysActivity.class);
                 startActivity(intent);
             }
         });
+        cactus_const.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CactusActivity.class);
+                startActivity(intent);
+            }
+        });
+        whereElse_const.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WhereElseActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
