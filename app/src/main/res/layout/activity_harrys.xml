@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bkgd"
+    android:background="#4f000000"
     tools:context=".HarrysActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/harrys_const_header"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/activity_bobby_t_bg"
+        android:background="@drawable/activity_harrys_bg"
         app:layout_constraintBottom_toTopOf="@+id/imgHarrys"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +21,13 @@
             android:id="@+id/lblHarrysTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:background="#7c000000"
-            android:paddingStart="8dp"
             android:paddingEnd="8dp"
+            android:paddingStart="8dp"
             android:text="@string/harrysTitle"
             android:textColor="#ffffff"
             android:textSize="30sp"
@@ -41,14 +41,15 @@
     <ImageView
         android:id="@+id/imgHarrys"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="100dp"
         android:background="#000000"
         android:contentDescription="@string/harrysTitle"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/harrys_lin_icons"
         app:layout_constraintEnd_toStartOf="@+id/lblHarrysAddr"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/harrys_logo" />
@@ -57,81 +58,194 @@
         android:id="@+id/lblHarrysAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
         android:maxLines="2"
-        android:text="@string/bobbyAddrTwoLines"
+        android:text="@string/harrysAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/harrys_lin_wait" />
 
-    <TextView
-        android:id="@+id/lblHarrysWait"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/harrys_lin_wait"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/wait"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
-
-    <TextView
-        android:id="@+id/lblHarrysHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/waitHours"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblHarrysWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
-
-    <TextView
-        android:id="@+id/lblHarrysMins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/waitMins"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblHarrysHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgHarrys" />
-
-    <Button
-        android:id="@+id/btnCallHarrys"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/callHarrys"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapHarrys"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imgHarrys"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnMapHarrys"
-        android:layout_width="250dp"
+        <TextView
+            android:id="@+id/lblHarrysWait"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgHarrys"
+            app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
+
+        <TextView
+            android:id="@+id/lblHarrysHours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHarrysWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblHarrysMins"
+            app:layout_constraintStart_toEndOf="@+id/lblHarrysWait" />
+
+        <TextView
+            android:id="@+id/lblHarrysMins"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHarrysHoursOperation"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblHarrysTitleHours"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerHarrys"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/hoursOfOperation"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/harrys_lin_wait"
+        app:layout_constraintTop_toBottomOf="@+id/lblHarrysAddr" />
 
-    <Button
-        android:id="@+id/btnTimerHarrys"
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/lblHarrysHoursOperation"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/timer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:maxLines="7"
+        android:text="@string/harrysHours"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/harrys_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblHarrysTitleHours"
+        app:layout_constraintTop_toBottomOf="@+id/lblHarrysTitleHours"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/harrys_lin_icons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/harrys_lin_lblicons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblHarrysHoursOperation">
+
+        <ImageButton
+            android:id="@+id/btnCallHarrys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/call"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageButton
+            android:id="@+id/btnMapHarrys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/maps" />
+
+        <ImageButton
+            android:id="@+id/btnHarrysTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/timer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/harrys_lin_lblicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblCallHarrys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callHarrys"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMapHarrys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblHarrysTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

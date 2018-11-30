@@ -8,7 +8,7 @@
     tools:context=".BrothersActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/brothers_const_header"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/activity_brothers_bg"
@@ -41,96 +41,211 @@
     <ImageView
         android:id="@+id/imgBrothers"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="100dp"
         android:background="#b7a500"
         android:contentDescription="@string/brothersTitle"
-        android:scaleType="fitCenter"
-        android:src="@drawable/brothers_logo"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_icons"
         app:layout_constraintEnd_toStartOf="@+id/lblBrothersAddr"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/brothers_logo" />
 
     <TextView
         android:id="@+id/lblBrothersAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
         android:maxLines="2"
-        android:text="@string/bobbyAddrTwoLines"
+        android:text="@string/brothersAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/brothers_lin_wait" />
 
-    <TextView
-        android:id="@+id/lblBrothersWait"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/brothers_lin_wait"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/wait"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
-
-    <TextView
-        android:id="@+id/lblBrothersHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/waitHours"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBrothersWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
-
-    <TextView
-        android:id="@+id/lblBrothersMins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/waitMins"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBrothersHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgBrothers" />
-
-    <Button
-        android:id="@+id/btnCallBrothers"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/callBrothers"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapBrothers"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imgBrothers"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnMapBrothers"
-        android:layout_width="250dp"
+        <TextView
+            android:id="@+id/lblBrothersWait"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="#73000f"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBrothers"
+            app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
+
+        <TextView
+            android:id="@+id/lblBrothersHours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBrothersWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblBrothersMins"
+            app:layout_constraintStart_toEndOf="@+id/lblBrothersWait" />
+
+        <TextView
+            android:id="@+id/lblBrothersMins"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBrothersHoursOperation"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblBrothersTitleHours"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerBrothers"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/hoursOfOperation"
+        android:textColor="#73000f"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/brothers_lin_wait"
+        app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
 
-    <Button
-        android:id="@+id/btnTimerBrothers"
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/lblBrothersHoursOperation"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/timer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:maxLines="7"
+        android:text="@string/brothersHours"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblBrothersTitleHours"
+        app:layout_constraintTop_toBottomOf="@+id/lblBrothersTitleHours"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/brothers_lin_icons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_lblicons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBrothersHoursOperation">
+
+        <ImageButton
+            android:id="@+id/btnCallBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/call"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageButton
+            android:id="@+id/btnMapBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/maps" />
+
+        <ImageButton
+            android:id="@+id/btnBrothersTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/timer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brothers_lin_lblicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblCallBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callBrothers"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMapBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblBrothersTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

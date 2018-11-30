@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#70ff58c7"
-    tools:context=".CactusActivity">
+    tools:context=".WhereElseActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/whereElse_const_header"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/activity_bobby_t_bg"
+        android:background="@drawable/activity_whereElse_bg"
         app:layout_constraintBottom_toTopOf="@+id/imgWhereElse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblWhereElseTitleTitle"
+            android:id="@+id/lblWhereElseTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -41,14 +41,15 @@
     <ImageView
         android:id="@+id/imgWhereElse"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="100dp"
         android:background="#ff00aa"
         android:contentDescription="@string/whereElseTitle"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_icons"
         app:layout_constraintEnd_toStartOf="@+id/lblWhereElseAddr"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/whereelse_logo" />
@@ -57,81 +58,194 @@
         android:id="@+id/lblWhereElseAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
         android:maxLines="2"
         android:text="@string/whereElseAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/whereElse_lin_wait" />
 
-    <TextView
-        android:id="@+id/lblWhereElseWait"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/whereElse_lin_wait"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/wait"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
-
-    <TextView
-        android:id="@+id/lblWhereElseHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/waitHours"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblWhereElseWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
-
-    <TextView
-        android:id="@+id/lblWhereElseMins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/waitMins"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblWhereElseHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse" />
-
-    <Button
-        android:id="@+id/btnCallWhereElse"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/callWhereElse"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapWhereElse"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnMapWhereElse"
-        android:layout_width="250dp"
+        <TextView
+            android:id="@+id/lblWhereElseWait"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="#ff00aa"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
+            app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
+
+        <TextView
+            android:id="@+id/lblWhereElseHours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblWhereElseWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblWhereElseMins"
+            app:layout_constraintStart_toEndOf="@+id/lblWhereElseWait" />
+
+        <TextView
+            android:id="@+id/lblWhereElseMins"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblWhereElseHoursOperation"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblWhereElseTitleHours"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerWhereElse"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/hoursOfOperation"
+        android:textColor="#ff00aa"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/whereElse_lin_wait"
+        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
 
-    <Button
-        android:id="@+id/btnTimerWhereElse"
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/lblWhereElseHoursOperation"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/timer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:maxLines="7"
+        android:text="@string/whereElseHours"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblWhereElseTitleHours"
+        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseTitleHours"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/whereElse_lin_icons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_lblicons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseHoursOperation">
+
+        <ImageButton
+            android:id="@+id/btnCallWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/call"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageButton
+            android:id="@+id/btnMapWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/maps" />
+
+        <ImageButton
+            android:id="@+id/btnWhereElseTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/timer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/whereElse_lin_lblicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblCallWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callWhereElse"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMapWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblWhereElseTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

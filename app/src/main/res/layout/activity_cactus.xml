@@ -8,17 +8,17 @@
     tools:context=".CactusActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/cactus_const_header"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/activity_bobby_t_bg"
+        android:background="@drawable/activity_cactus_bg"
         app:layout_constraintBottom_toTopOf="@+id/imgCactus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblcactusTitle"
+            android:id="@+id/lblCactusTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -41,97 +41,211 @@
     <ImageView
         android:id="@+id/imgCactus"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="100dp"
         android:background="#00950f"
         android:contentDescription="@string/cactusTitle"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/cactus_lin_icons"
         app:layout_constraintEnd_toStartOf="@+id/lblCactusAddr"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cactus_logo_trans" />
+        app:srcCompat="@drawable/cactus_logo" />
 
     <TextView
         android:id="@+id/lblCactusAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
         android:maxLines="2"
         android:text="@string/cactusAddrTwoLines"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cactus_lin_wait" />
 
-    <TextView
-        android:id="@+id/lblCactusWait"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/cactus_lin_wait"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/wait"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
-
-    <TextView
-        android:id="@+id/lblCactusHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/waitHours"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblCactusWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
-
-    <TextView
-        android:id="@+id/lblCactusMins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/waitMins"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblCactusHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgCactus" />
-
-    <Button
-        android:id="@+id/btnCallCactus"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/callCactus"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapCactus"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imgCactus"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnMapCactus"
-        android:layout_width="250dp"
+        <TextView
+            android:id="@+id/lblCactusWait"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="#00640a"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgCactus"
+            app:layout_constraintTop_toBottomOf="@+id/lblCactusAddr" />
+
+        <TextView
+            android:id="@+id/lblCactusHours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCactusWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblCactusMins"
+            app:layout_constraintStart_toEndOf="@+id/lblCactusWait" />
+
+        <TextView
+            android:id="@+id/lblCactusMins"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal|center"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCactusHoursOperation"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblCactusTitleHours"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerCactus"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/hoursOfOperation"
+        android:textColor="#00640a"
+        android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cactus_lin_wait"
+        app:layout_constraintTop_toBottomOf="@+id/lblCactusAddr" />
 
-    <Button
-        android:id="@+id/btnTimerCactus"
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/lblCactusHoursOperation"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/timer"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:maxLines="7"
+        android:text="@string/cactusHours"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cactus_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblCactusTitleHours"
+        app:layout_constraintTop_toBottomOf="@+id/lblCactusTitleHours"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/cactus_lin_icons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cactus_lin_lblicons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCactusHoursOperation">
+
+        <ImageButton
+            android:id="@+id/btnCallCactus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/call"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageButton
+            android:id="@+id/btnMapCactus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/maps" />
+
+        <ImageButton
+            android:id="@+id/btnCactusTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/timer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cactus_lin_lblicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblCallCactus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callCactus"
+            android:textColor="#00640a"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMapCactus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#00640a"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblCactusTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#00640a"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
