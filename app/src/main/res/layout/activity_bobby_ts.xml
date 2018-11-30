@@ -7,61 +7,8 @@
     android:background="#7f274f8b"
     tools:context=".BobbyTsActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
-        app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr">
-
-        <TextView
-            android:id="@+id/lblBobbyWait"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="."
-            android:layout_marginStart="4dp"
-            android:layout_weight="1"
-            android:text="@string/wait"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
-            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
-
-        <TextView
-            android:id="@+id/lblBobbyHours"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="."
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp"
-            android:layout_weight="1"
-            android:text="@string/waitHours"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyWait"
-            app:layout_constraintEnd_toStartOf="@+id/lblBobbyMins"
-            app:layout_constraintStart_toEndOf="@+id/lblBobbyWait" />
-
-        <TextView
-            android:id="@+id/lblBobbyMins"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="."
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:text="@string/waitMins"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyHours"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </LinearLayout>
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/bobby_const_header"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/activity_bobby_t_bg"
@@ -71,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/lblBrothersTitle"
+            android:id="@+id/lblBobbyTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -94,12 +41,13 @@
     <ImageView
         android:id="@+id/imgBobbyTs"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="4dp"
         android:layout_marginTop="100dp"
         android:background="#274F8B"
         android:contentDescription="@string/bobbyTitle"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/lblBobbyTitleHoursOfOperation"
         app:layout_constraintEnd_toStartOf="@+id/lblBobbyAddr"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,16 +71,100 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:id="@+id/bobby_lin_wait"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+        app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/lblBobbyWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
+
+        <TextView
+            android:id="@+id/lblBobbyHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblBobbyMins"
+            app:layout_constraintStart_toEndOf="@+id/lblBobbyWait" />
+
+        <TextView
+            android:id="@+id/lblBobbyMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyHours"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblBobbyTitleHoursOfOperation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/hoursOfOperation"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bobby_lin_wait"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblBobbyHours"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:maxLines="7"
+        android:text="@string/bobbyTsHours"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_icons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBobbyTitleHoursOfOperation" />
+
+    <LinearLayout
+        android:id="@+id/bobby_lin_icons"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="16dp">
 
         <ImageButton
-            android:id="@+id/btnCallBobbys"
+            android:id="@+id/btnCallBobby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
@@ -145,7 +177,7 @@
             tools:layout_editor_absoluteY="0dp" />
 
         <ImageButton
-            android:id="@+id/btnMapBobbys"
+            android:id="@+id/btnMapBobby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
@@ -156,7 +188,7 @@
             app:srcCompat="@drawable/maps" />
 
         <ImageButton
-            android:id="@+id/btnBobbysTimer"
+            android:id="@+id/btnBobbyTimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
@@ -167,4 +199,5 @@
             app:srcCompat="@drawable/timer" />
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
