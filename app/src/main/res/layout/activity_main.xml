@@ -72,8 +72,8 @@
                 android:text="99"
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/lblBobbyHours"
-                app:layout_constraintEnd_toEndOf="@+id/lblBobbyHours"
+                app:layout_constraintBottom_toTopOf="@+id/lblBobbyHoursOperation"
+                app:layout_constraintEnd_toEndOf="@+id/lblBobbyHoursOperation"
                 app:layout_constraintStart_toStartOf="@+id/lblBobbyWait"
                 app:layout_constraintTop_toBottomOf="@+id/lblBobbyWait" />
 
@@ -116,7 +116,7 @@
             app:layout_constraintVertical_bias="0.985">
 
             <TextView
-                android:id="@+id/lblBobbyHours"
+                android:id="@+id/lblBobbyHoursOperation"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
