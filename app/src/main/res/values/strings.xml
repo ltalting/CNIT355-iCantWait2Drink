@@ -25,4 +25,7 @@
     <string name="maps">Open Location in Maps</string>
     <string name="timer">Start Wait Timer</string>
     <string name="callBobby">Call Bobby T\'s</string>
+    <string name="callCactus">Call Neon Cactus</string>
+    <string name="callHarrys">Call Harry\'s</string>
+    <string name="callWhereElse">Call Where Else</string>
 </resources>

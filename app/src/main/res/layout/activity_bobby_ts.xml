@@ -7,6 +7,59 @@
     android:background="#7f274f8b"
     tools:context=".BobbyTsActivity">
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+        app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr">
+
+        <TextView
+            android:id="@+id/lblBobbyWait"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="."
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/wait"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
+            app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
+
+        <TextView
+            android:id="@+id/lblBobbyHours"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="."
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/waitHours"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyWait"
+            app:layout_constraintEnd_toStartOf="@+id/lblBobbyMins"
+            app:layout_constraintStart_toEndOf="@+id/lblBobbyWait" />
+
+        <TextView
+            android:id="@+id/lblBobbyMins"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="."
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/waitMins"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblBobbyHours"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
@@ -57,6 +110,7 @@
         android:id="@+id/lblBobbyAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:maxLines="2"
@@ -68,71 +122,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/lblBobbyWait"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wait"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
-
-    <TextView
-        android:id="@+id/lblBobbyHours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/waitHours"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyWait"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
-
-    <TextView
-        android:id="@+id/lblBobbyMins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/waitMins"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/lblBobbyHours"
-        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs" />
-
-    <Button
-        android:id="@+id/btnCallBobbyTs"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/callBobby"
-        app:layout_constraintBottom_toTopOf="@+id/btnMapBobbyTs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnMapBobbyTs"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/maps"
-        app:layout_constraintBottom_toTopOf="@+id/btnTimerBobbyTs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnTimerBobbyTs"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
-        android:text="@string/timer"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs">
+
+        <ImageButton
+            android:id="@+id/btnCallBobbys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/call"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageButton
+            android:id="@+id/btnMapBobbys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/maps" />
+
+        <ImageButton
+            android:id="@+id/btnBobbysTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/timer" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
