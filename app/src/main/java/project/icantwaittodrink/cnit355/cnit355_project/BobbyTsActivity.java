@@ -12,10 +12,16 @@ public class BobbyTsActivity extends AppCompatActivity {
 
     ImageView btnTimer, btnMaps, btnCall;
 
+
+    String address, phoneNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bobby_ts);
+
+        address = getString(R.string.bobbyAddr);
+        phoneNumber = getString(R.string.BobbyTPhone);
 
         //Initialize Buttons
         btnTimer = findViewById(R.id.btnBobbyTimer);
@@ -29,21 +35,22 @@ public class BobbyTsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //Go to Google Maps
+        //Go to Maps
         btnMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=308 W State St, West Lafayette, IN 47906"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + address));
                 startActivity(intent);
             }
         });
-        //Dial Bobby Ts
+        //Call Bar
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+3173456789"));
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
                 startActivity(intent);
             }
         });
+
     }
 }
