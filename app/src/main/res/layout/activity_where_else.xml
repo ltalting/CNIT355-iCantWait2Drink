@@ -169,10 +169,11 @@
             android:id="@+id/btnCallWhereElse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="20dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/call"
             tools:layout_editor_absoluteX="0dp"
@@ -182,10 +183,11 @@
             android:id="@+id/btnMapWhereElse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
             android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="20dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/maps" />
 
@@ -193,10 +195,11 @@
             android:id="@+id/btnWhereElseTimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="20dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/timer" />
 
