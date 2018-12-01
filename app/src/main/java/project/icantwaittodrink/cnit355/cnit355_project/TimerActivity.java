@@ -26,7 +26,7 @@ public class TimerActivity extends AppCompatActivity {
             int mins = secs/60;
             secs%=60;
             int milliseconds = (int)(updateTime);
-            txtTime.setText(""+mins+":"+String.format("%2d", secs)+":"+String.format("%3d,", milliseconds));
+            txtTime.setText(""+String.format("%02d", mins)+":"+String.format("%02d", secs));
             customHandler.postDelayed(this, 0);
         }
     };
@@ -40,12 +40,23 @@ public class TimerActivity extends AppCompatActivity {
         btnIn = findViewById(R.id.btnImIn);
         txtTime = findViewById(R.id.timerClock);
 
-        timeSwapBuff = timeInMilliseconds;
-        customHandler.removeCallbacks(updateTimerThread);
+
+        startTime = SystemClock.uptimeMillis();
+        customHandler.postDelayed(updateTimerThread, 0);
+        //timeSwapBuff = timeInMilliseconds;
+        //customHandler.removeCallbacks(updateTimerThread);
 
         btnIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                timeSwapBuff+=timeInMilliseconds;
+                customHandler.removeCallbacks(updateTimerThread);
+            }
+        });
+
+        btnLeave.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
                 timeSwapBuff+=timeInMilliseconds;
                 customHandler.removeCallbacks(updateTimerThread);
             }
