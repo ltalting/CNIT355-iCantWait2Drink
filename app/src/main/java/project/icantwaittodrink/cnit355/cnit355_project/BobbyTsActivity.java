@@ -9,21 +9,26 @@ import android.widget.ImageView;
 
 public class BobbyTsActivity extends AppCompatActivity {
 
-    Button bobbyTimer;
-    ImageView bt;
+    ImageView btnTimer, btnMaps, btnCall;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bobby_ts);
 
-        bt = findViewById(R.id.btnBobbyTimer);
+        //Initialize Buttons
+        btnTimer = findViewById(R.id.btnBobbyTimer);
+        btnMaps = findViewById(R.id.btnMapBobby);
+        btnCall = findViewById(R.id.btnCallBobby);
 
-        bt.setOnClickListener(new View.OnClickListener() {
+        btnTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TimerActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 }
