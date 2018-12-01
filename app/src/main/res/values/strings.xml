@@ -40,5 +40,6 @@
     <string name="CactusPhone">3174031223</string>
     <string name="HarrysPhone">3174031223</string>
     <string name="WhereElsePhone">3174031223</string>
+    <string name="waitingFor">You\'ve been waiting for:</string>
 
 </resources>
