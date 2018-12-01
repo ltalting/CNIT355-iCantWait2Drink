@@ -1,9 +1,12 @@
 package project.icantwaittodrink.cnit355.cnit355_project;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.SystemClock;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -16,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     ConstraintLayout bobbys_const, brothers_const, cactus_const, harrys_const, whereElse_const;
     ImageView bobbyClosed, bobbyOpen, brothersClosed, brothersOpen, cactusClosed, cactusOpen, harrysClosed, harrysOpen, whereElseClosed, whereElseOpen;
-
+    Drawable closedFalse, closedTrue, openTrue, openFalse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         // ASSIGN UI VARIABLES
 
-        // Images
+        // ImageViews
         bobbyClosed = findViewById(R.id.imgBobbyClosed);
         brothersClosed = findViewById(R.id.imgBrothersClosed);
         cactusClosed = findViewById(R.id.imgCactusClosed);
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         cactus_const = findViewById(R.id.cactus_const);
         harrys_const = findViewById(R.id.harrys_const);
         whereElse_const = findViewById(R.id.whereElse_const);
+
+        // Drawables
+        closedFalse = this.getResources().getDrawable(R.drawable.closed_false);
+        closedTrue = this.getResources().getDrawable(R.drawable.closed_true);
+        openFalse = this.getResources().getDrawable(R.drawable.open_false);
+        openTrue = this.getResources().getDrawable(R.drawable.open_true);
 
         // Container onClickListeners
         bobbys_const.setOnClickListener(new View.OnClickListener() {
@@ -82,47 +91,430 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Open/Close Thread
         Thread openClose = new Thread() {
             @Override
             public void run() {
-                updateUI();
+                int i = 0;
+                while (i == 0){
+                    // Every one second...
+                    SystemClock.sleep(1000);
+                    // Update the UI
+                    updateUI();
+                }
             }
         };
         openClose.start();
     }
     public void updateUI(){
-        Bundle uiBundle = new Bundle();
-
         Calendar calendar = Calendar.getInstance();
+        // Get current day.
         int day = calendar.get(Calendar.DAY_OF_WEEK);
-
+        // Get current hour.
+        Date time = calendar.getTime();
+        DateFormat hourFormat = new SimpleDateFormat("HH");
+        String currentHour = hourFormat.format(time);
+        int intHour = Integer.parseInt(currentHour);
         switch (day) {
-            case Calendar.SUNDAY:
-                // Current day is Sunday
-                break;
+            // Current day is Monday.
             case Calendar.MONDAY:
-                // Current day is Monday
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                cactusOpen.setImageDrawable(openFalse);
+                cactusClosed.setImageDrawable(closedTrue);
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                whereElseOpen.setImageDrawable(openFalse);
+                whereElseClosed.setImageDrawable(closedTrue);
                 break;
             case Calendar.TUESDAY:
-                // etc.
+                // Current day is Tuesday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                cactusOpen.setImageDrawable(openFalse);
+                cactusClosed.setImageDrawable(closedTrue);
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                whereElseOpen.setImageDrawable(openFalse);
+                whereElseClosed.setImageDrawable(closedTrue);
+                break;
+            case Calendar.WEDNESDAY:
+                // Current day is Wednesday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                cactusOpen.setImageDrawable(openFalse);
+                cactusClosed.setImageDrawable(closedTrue);
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                if (12 <= intHour && intHour < 24){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    whereElseOpen.setImageDrawable(openFalse);
+                    whereElseClosed.setImageDrawable(closedTrue);
+                }
+                break;
+            case Calendar.THURSDAY:
+                // Current day is Thursday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                if (20 <= intHour && intHour < 24){
+                    cactusOpen.setImageDrawable(openTrue);
+                    cactusClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    cactusOpen.setImageDrawable(openFalse);
+                    cactusClosed.setImageDrawable(closedTrue);
+                }
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else if (12 <= intHour && intHour < 24){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    whereElseOpen.setImageDrawable(openFalse);
+                    whereElseClosed.setImageDrawable(closedTrue);
+                }
+            case Calendar.FRIDAY:
+                // Current day is Friday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                if (0 <= intHour && intHour <= 3){
+                    cactusOpen.setImageDrawable(openTrue);
+                }
+                else if (20 <= intHour && intHour < 24){
+                    cactusOpen.setImageDrawable(openTrue);
+                }
+                else{
+                    cactusOpen.setImageDrawable(openFalse);
+                    cactusClosed.setImageDrawable(closedTrue);
+                }
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else if (12 <= intHour && intHour < 24){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    whereElseOpen.setImageDrawable(openFalse);
+                    whereElseClosed.setImageDrawable(closedTrue);
+                }
+                break;
+            case Calendar.SATURDAY:
+                // Current day is Saturday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (17 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                if (0 <= intHour && intHour <= 3){
+                    cactusOpen.setImageDrawable(openTrue);
+                }
+                else if (20 <= intHour && intHour < 24){
+                    cactusOpen.setImageDrawable(openTrue);
+                }
+                else{
+                    cactusOpen.setImageDrawable(openFalse);
+                    cactusClosed.setImageDrawable(closedTrue);
+                }
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (11 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else if (12 <= intHour && intHour < 24){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    whereElseOpen.setImageDrawable(openFalse);
+                    whereElseClosed.setImageDrawable(closedTrue);
+                }
+                break;
+            case Calendar.SUNDAY:
+                // Current day is Sunday.
+                // Set Bobby T's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else if (19 <= intHour && intHour < 24){
+                    bobbyOpen.setImageDrawable(openTrue);
+                    bobbyClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    bobbyOpen.setImageDrawable(openFalse);
+                    bobbyClosed.setImageDrawable(closedTrue);
+                }
+                // Set Brother's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else if (7 <= intHour && intHour < 24){
+                    brothersOpen.setImageDrawable(openTrue);
+                    brothersClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    brothersOpen.setImageDrawable(openFalse);
+                    brothersClosed.setImageDrawable(closedTrue);
+                }
+                // Set Cactus Open/Close.
+                cactusOpen.setImageDrawable(openFalse);
+                cactusClosed.setImageDrawable(closedTrue);
+                // Set Harry's Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else if (12 <= intHour && intHour < 24){
+                    harrysOpen.setImageDrawable(openTrue);
+                    harrysClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    harrysOpen.setImageDrawable(openFalse);
+                    harrysClosed.setImageDrawable(closedTrue);
+                }
+                // Set Where else Open/Close.
+                if (0 <= intHour && intHour < 3){
+                    whereElseOpen.setImageDrawable(openTrue);
+                    whereElseClosed.setImageDrawable(closedFalse);
+                }
+                else{
+                    whereElseOpen.setImageDrawable(openFalse);
+                    whereElseClosed.setImageDrawable(closedTrue);
+                }
                 break;
         }
-
-    }
-    // Returns current hour in 24 hour format.
-    public String currentHour(){
-        Calendar cal = Calendar.getInstance();
-        Date time = cal.getTime();
-        DateFormat timeFormat = new SimpleDateFormat("HH");
-        String currentTime = timeFormat.format(time);
-        return currentTime;
-    }
-    // Returns current minutes in 24 hour format.
-    public String currentMin(){
-        Calendar cal = Calendar.getInstance();
-        Date time = cal.getTime();
-        DateFormat timeFormat = new SimpleDateFormat("HH:mm");
-        String currentTime = timeFormat.format(time);
-        return currentTime;
     }
 }
