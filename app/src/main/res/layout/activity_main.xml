@@ -747,7 +747,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lblwhereElseAddr">
 
             <ImageView
-                android:id="@+id/imgwhereElseClosed"
+                android:id="@+id/imgWhereElseClosed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -759,7 +759,7 @@
                 app:srcCompat="@drawable/closed_false" />
 
             <ImageView
-                android:id="@+id/imgwhereElseOpen"
+                android:id="@+id/imgWhereElseOpen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"

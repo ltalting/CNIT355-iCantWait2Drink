@@ -28,8 +28,9 @@
     <string name="callCactus">Call Neon Cactus</string>
     <string name="callHarrys">Call Harry\'s</string>
     <string name="callWhereElse">Call Where Else</string>
-    <string name="bobbyTsHours">Monday: 0 min\nTuesday: 0 min\nWednesday: 0 min\nThursday: 0 min\nFriday: 0 min\nSaturday: 0 min\nSunday: 0 min</string>
-    <string name="brothersHours">Monday: 5:00PM-3:00AM\nTuesday: 5:00PM-3:00AM\nWednesday: 5:00PM-3:00AM\nThursday: 5:00PM-3:00AM\nFriday: 5:00PM-3:00AM\nSaturday: 5:00PM-3:00AM\nSunday: 7:00PM-3:00AM</string>
+    <string name="avgWait">Monday: 0 min\nTuesday: 0 min\nWednesday: 0 min\nThursday: 0 min\nFriday: 0 min\nSaturday: 0 min\nSunday: 0 min</string>
+    <string name="bobbyTsHours">Monday: 5:00PM-3:00AM\nTuesday: 5:00PM-3:00AM\nWednesday: 5:00PM-3:00AM\nThursday: 5:00PM-3:00AM\nFriday: 5:00PM-3:00AM\nSaturday: 5:00PM-3:00AM\nSunday: 7:00PM-3:00AM</string>
+    <string name="brothersHours">Monday: 11:00AM-3:00AM\nTuesday: 11:00AM-3:00AM\nWednesday: 11:00AM-3:00AM\nThursday: 11:00AM-3:00AM\nFriday: 11:00AM-3:00AM\nSaturday: 11:00AM-3:00AM\nSunday: 7:00AM-3:00AM</string>
     <string name="cactusHours">Monday: Closed\nTuesday: Closed\nWednesday: Closed\nThursday: 8:00PM-3:00AM\nFriday: 8:00PM-3:00AM\nSaturday: 8:00PM-3:00AM\nSunday: Closed</string>
     <string name="harrysHours">Monday: 11:00AM-3:00AM\nTuesday: 11:00AM-3:00AM\nWednesday: 11:00AM-3:00AM\nThursday: 11:00AM-3:00AM\nFriday: 11:00AM-3:00AM\nSaturday: 11:00AM-3:00AM\nSunday: 12:00PM-3:00AM</string>
     <string name="whereElseHours">Monday: Closed\nTuesday: Closed\nWednesday: 12:00PM-3:00AM\nThursday: 12:00PM-3:00AM\nFriday: 12:00PM-3:00AM\nSaturday: 12:00PM-3:00AM\nSunday: Closed</string>
