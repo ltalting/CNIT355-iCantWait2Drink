@@ -30,6 +30,7 @@ public class WhereElseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TimerActivity.class);
+                intent.putExtra("bar","whereElse");
                 startActivity(intent);
             }
         });

@@ -31,6 +31,7 @@ public class HarrysActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TimerActivity.class);
+                intent.putExtra("bar","harrys");
                 startActivity(intent);
             }
         });

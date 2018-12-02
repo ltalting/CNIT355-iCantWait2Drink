@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "961282698957",
+    "firebase_url": "https://cnit355project.firebaseio.com",
+    "project_id": "cnit355project",
+    "storage_bucket": "cnit355project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961282698957:android:afa49a83ac765116",
+        "android_client_info": {
+          "package_name": "project.icantwaittodrink.cnit355.cnit355_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961282698957-l8kee6ev5up4k9n48jt5lh1lgjl1gpgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "project.icantwaittodrink.cnit355.cnit355_project",
+            "certificate_hash": "a91fafb2168cbc8a5e0311f9cf3b83501e646d81"
+          }
+        },
+        {
+          "client_id": "961282698957-oqtu5f04nsrhmcse2dpksj5i26fc9g4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnoc_C71_LB49lIgf41lT0OZK0XU31f5s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961282698957-oqtu5f04nsrhmcse2dpksj5i26fc9g4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
