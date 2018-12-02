@@ -22,12 +22,11 @@
     <ImageView
         android:id="@+id/imgBobbyTs"
         android:layout_width="160dp"
-        android:layout_height="0dp"
+        android:layout_height="112dp"
         android:layout_marginTop="125dp"
         android:background="#274F8B"
         android:contentDescription="@string/bobbyTitle"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/lblBobbyTitleHours"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bobby_ts" />
@@ -61,11 +60,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="@android:color/white"
             android:gravity="center_horizontal|center"
             android:text="@string/waitHours"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBobbyWait"
             app:layout_constraintEnd_toStartOf="@+id/lblBobbyMins"
             app:layout_constraintStart_toEndOf="@+id/lblBobbyWait" />
@@ -75,11 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="@android:color/white"
             android:gravity="center_horizontal|center"
             android:text="@string/waitMins"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBobbyHoursOperation"
             app:layout_constraintEnd_toEndOf="parent" />
 

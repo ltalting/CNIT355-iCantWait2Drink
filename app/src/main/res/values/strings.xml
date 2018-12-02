@@ -22,7 +22,7 @@
     <string name="whereElseAddr">135 S. Chauncey Ave, West Lafayette, IN 47906</string>
     <string name="whereElseAddrTwoLines">135 S. Chauncey Ave,\nWest Lafayette, IN 47906</string>
     <string name="callBrothers">Call Brother\'s</string>
-    <string name="maps">Open Location in Maps</string>
+    <string name="maps">Open in Maps</string>
     <string name="timer">Start Wait Timer</string>
     <string name="callBobby">Call Bobby T\'s</string>
     <string name="callCactus">Call Neon Cactus</string>
