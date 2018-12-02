@@ -636,9 +636,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/lblBrothersTitleHours"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgBrothers"
@@ -648,8 +647,6 @@
             android:id="@+id/lblBrothersWait"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/wait"
@@ -693,42 +690,16 @@
         android:id="@+id/lblBrothersTitleHours"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
         android:gravity="center_horizontal"
         android:text="@string/waitTimeTitle"
         android:textColor="#73000f"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/brothers_lin_wait"
-        tools:layout_editor_absoluteY="203dp" />
-
-    <LinearLayout
-        android:id="@+id/brothers_lin_icons"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_lblicons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/brothers_lin_lblicons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/brothers_lin_wait" />
 
 </android.support.constraint.ConstraintLayout>

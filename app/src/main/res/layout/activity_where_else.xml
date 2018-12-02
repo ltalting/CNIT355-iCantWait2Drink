@@ -17,62 +17,627 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lblWhereElseTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#7c000000"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:text="@string/whereElseTitle"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imgWhereElse"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
         android:layout_marginTop="100dp"
         android:background="#ff00aa"
         android:contentDescription="@string/whereElseTitle"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_icons"
-        app:layout_constraintEnd_toStartOf="@+id/lblWhereElseAddr"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/whereelse_logo" />
 
-    <TextView
-        android:id="@+id/lblWhereElseAddr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/scrlWhereElseWaitTimes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:maxLines="2"
-        android:text="@string/whereElseAddrTwoLines"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whereElse_lin_wait" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseTitleHours">
+
+        <LinearLayout
+            android:id="@+id/whereElse_lin_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_twelve_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse12AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelveAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse12AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_one_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse1AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/oneAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse1AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_two_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse2AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse2AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_three_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse3AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threeAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse3AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_four_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse4AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse4AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_five_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse5AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fiveAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse5AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_six_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse6AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse6AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_seven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse7AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse7AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_eight_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse8AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse8AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_nine_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse9AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nineAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse9AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_ten_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse10AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse10AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_eleven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse11AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenAM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse11AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_twelve_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse12PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelvePM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse12PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_one_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse1PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/onePM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse1PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_two_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse2PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse2PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_three_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse3PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threePM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse3PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_four_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse4PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse4PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_five_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse5PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fivePM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse5PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_six_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse6PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse6PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_seven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse7PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse7PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_eight_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse8PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse8PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_nine_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse9PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ninePM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse9PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_ten_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse10PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse10PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereElse_lin_eleven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblWhereElse11PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenPM" />
+
+                <TextView
+                    android:id="@+id/lblWhereElse11PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgWhereElse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgWhereElse">
+
+        <ImageButton
+            android:id="@+id/btnCallWhereElse"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/call" />
+
+        <TextView
+            android:id="@+id/lblCallWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callWhereElse"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMapWhereElse"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/maps" />
+
+        <TextView
+            android:id="@+id/lblMapWhereElse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnWhereElseTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/lblWhereElseTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#ff00aa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/whereElse_lin_wait"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="100dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
@@ -82,12 +647,12 @@
             android:id="@+id/lblWhereElseWait"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp"
             android:layout_weight="1"
+            android:gravity="center_vertical"
             android:text="@string/wait"
+            android:textAlignment="center"
             android:textColor="#ff00aa"
-            android:textSize="19sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgWhereElse"
             app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
@@ -101,7 +666,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitHours"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblWhereElseWait"
             app:layout_constraintEnd_toStartOf="@+id/lblWhereElseMins"
             app:layout_constraintStart_toEndOf="@+id/lblWhereElseWait" />
@@ -115,7 +680,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitMins"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblWhereElseHoursOperation"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -125,131 +690,16 @@
         android:id="@+id/lblWhereElseTitleHours"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
         android:text="@string/waitTimeTitle"
         android:textColor="#ff00aa"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/whereElse_lin_wait"
-        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseAddr" />
-
-    <TextView
-        android:id="@+id/lblWhereElseHoursOperation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        android:maxLines="7"
-        android:text="@string/avgWait"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_icons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/lblWhereElseTitleHours"
-        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseTitleHours"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <LinearLayout
-        android:id="@+id/whereElse_lin_icons"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/whereElse_lin_lblicons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblWhereElseHoursOperation">
-
-        <ImageButton
-            android:id="@+id/btnCallWhereElse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/call"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageButton
-            android:id="@+id/btnMapWhereElse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/maps" />
-
-        <ImageButton
-            android:id="@+id/btnWhereElseTimer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/timer" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/whereElse_lin_lblicons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/lblCallWhereElse"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/callWhereElse"
-            android:textColor="#ff00aa"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lblMapWhereElse"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/maps"
-            android:textColor="#ff00aa"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lblWhereElseTimer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/timer"
-            android:textColor="#ff00aa"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/whereElse_lin_wait" />
 
 </android.support.constraint.ConstraintLayout>
