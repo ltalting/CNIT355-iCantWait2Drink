@@ -153,7 +153,12 @@ public class TimerActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        int entries = Integer.parseInt(document.getData().get("entries").toString());
+                        int entries = 1;
+                        try {
+                            entries = Integer.parseInt(document.getData().get("entries " + dataTime).toString());
+                        } catch (Exception e) {
+                            createEntry(barName, dataTime);
+                        }
                         int newAverage = currentTime + ((seconds - currentTime) / entries);
                         Map<String, Object> data = new HashMap<>();
                         data.put(dataTime, newAverage);
@@ -163,7 +168,7 @@ public class TimerActivity extends AppCompatActivity {
                         // update entries
                         Map<String, Object> data2 = new HashMap<>();
                         entries = entries + 1;
-                        data2.put("entries", entries);
+                        data2.put("entries " + dataTime, entries);
 
                         db.collection("bars").document(barName)
                                 .set(data2, SetOptions.merge());
@@ -171,6 +176,14 @@ public class TimerActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void createEntry(String barName, String dataTime) {
+        Map<String, Object> data = new HashMap<>();
+        data.put("entries " + dataTime, 1);
+
+        db.collection("bars").document(barName)
+                .set(data, SetOptions.merge());
     }
 
     public void postNewData(String barName, String dataTime, int seconds) {
