@@ -17,62 +17,628 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lblBrothersTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#7c000000"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:text="@string/brothersTitle"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imgBrothers"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
         android:layout_marginTop="100dp"
         android:background="#b7a500"
         android:contentDescription="@string/brothersTitle"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_icons"
-        app:layout_constraintEnd_toStartOf="@+id/lblBrothersAddr"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brothers_logo" />
 
-    <TextView
-        android:id="@+id/lblBrothersAddr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+    <ScrollView
+        android:id="@+id/scrlBrothersWaitTimes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:maxLines="2"
-        android:text="@string/brothersAddrTwoLines"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/brothers_lin_wait" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/lblBrothersTitleHours">
+
+        <LinearLayout
+            android:id="@+id/brothers_lin_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_twelve_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers12AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelveAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers12AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_one_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers1AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/oneAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers1AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_two_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers2AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers2AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_three_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers3AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threeAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers3AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_four_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers4AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers4AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_five_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers5AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fiveAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers5AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_six_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers6AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers6AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_seven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers7AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers7AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_eight_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers8AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers8AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_nine_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers9AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nineAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers9AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_ten_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers10AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers10AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_eleven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers11AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenAM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers11AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_twelve_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers12PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelvePM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers12PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_one_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers1PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/onePM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers1PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_two_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers2PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers2PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_three_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers3PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threePM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers3PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_four_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers4PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers4PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_five_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers5PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fivePM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers5PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_six_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers6PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers6PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_seven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers7PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers7PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_eight_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers8PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers8PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_nine_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers9PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ninePM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers9PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_ten_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers10PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers10PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brothers_lin_eleven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBrothers11PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenPM" />
+
+                <TextView
+                    android:id="@+id/lblBrothers11PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgBrothers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBrothers">
+
+        <ImageButton
+            android:id="@+id/btnCallBrothers"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/call" />
+
+        <TextView
+            android:id="@+id/lblCallBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/callBrothers"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMapBrothers"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/maps" />
+
+        <TextView
+            android:id="@+id/lblMapBrothers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/maps"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnBrothersTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/lblBrothersTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#73000f"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/brothers_lin_wait"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="100dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lblBrothersTitleHours"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgBrothers"
@@ -82,12 +648,14 @@
             android:id="@+id/lblBrothersWait"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:gravity="center_vertical"
             android:text="@string/wait"
+            android:textAlignment="center"
             android:textColor="#73000f"
-            android:textSize="19sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgBrothers"
             app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
@@ -101,7 +669,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitHours"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBrothersWait"
             app:layout_constraintEnd_toStartOf="@+id/lblBrothersMins"
             app:layout_constraintStart_toEndOf="@+id/lblBrothersWait" />
@@ -115,7 +683,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitMins"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBrothersHoursOperation"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -126,7 +694,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
         android:text="@string/waitTimeTitle"
         android:textColor="#73000f"
@@ -135,74 +702,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/brothers_lin_wait"
-        app:layout_constraintTop_toBottomOf="@+id/lblBrothersAddr" />
-
-    <TextView
-        android:id="@+id/lblBrothersHoursOperation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        android:maxLines="7"
-        android:text="@string/avgWait"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/brothers_lin_icons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/lblBrothersTitleHours"
-        app:layout_constraintTop_toBottomOf="@+id/lblBrothersTitleHours"
-        app:layout_constraintVertical_chainStyle="packed" />
+        tools:layout_editor_absoluteY="203dp" />
 
     <LinearLayout
         android:id="@+id/brothers_lin_icons"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
+        android:layout_height="150dp"
         android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/brothers_lin_lblicons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblBrothersHoursOperation">
-
-        <ImageButton
-            android:id="@+id/btnCallBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/call"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageButton
-            android:id="@+id/btnMapBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/maps" />
-
-        <ImageButton
-            android:id="@+id/btnBrothersTimer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/timer" />
+        app:layout_constraintStart_toStartOf="parent">
 
     </LinearLayout>
 
@@ -218,38 +729,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/lblCallBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/callBrothers"
-            android:textColor="#73000f"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lblMapBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/maps"
-            android:textColor="#73000f"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lblBrothersTimer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/timer"
-            android:textColor="#73000f"
-            android:textSize="18sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
