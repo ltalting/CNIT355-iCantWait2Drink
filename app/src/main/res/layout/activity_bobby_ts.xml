@@ -17,61 +17,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lblBobbyTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#7c000000"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:text="@string/bobbyTitle"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imgBobbyTs"
-        android:layout_width="0dp"
+        android:layout_width="160dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="125dp"
         android:background="#274F8B"
         android:contentDescription="@string/bobbyTitle"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_icons"
-        app:layout_constraintEnd_toStartOf="@+id/lblBobbyAddr"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/lblBobbyTitleHours"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bobby_ts" />
-
-    <TextView
-        android:id="@+id/lblBobbyAddr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="4dp"
-        android:maxLines="2"
-        android:text="@string/bobbyAddrTwoLines"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bobby_lin_wait" />
 
     <LinearLayout
         android:id="@+id/bobby_lin_wait"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="125dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,12 +47,11 @@
             android:id="@+id/lblBobbyWait"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="4dp"
             android:layout_weight="1"
+            android:gravity="center_horizontal|center"
             android:text="@string/wait"
             android:textColor="#274F8B"
-            android:textSize="19sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgBobbyTs"
             app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
@@ -101,7 +65,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitHours"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBobbyWait"
             app:layout_constraintEnd_toStartOf="@+id/lblBobbyMins"
             app:layout_constraintStart_toEndOf="@+id/lblBobbyWait" />
@@ -115,7 +79,7 @@
             android:gravity="center_horizontal|center"
             android:text="@string/waitMins"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBobbyHoursOperation"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -125,104 +89,46 @@
         android:id="@+id/lblBobbyTitleHours"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/hoursOfOperation"
+        android:layout_marginTop="8dp"
+        android:text="@string/waitTimeTitle"
         android:textAlignment="center"
         android:textColor="#274F8B"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/bobby_lin_wait"
-        app:layout_constraintTop_toBottomOf="@+id/lblBobbyAddr" />
-
-    <TextView
-        android:id="@+id/lblBobbyHoursOperation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center_vertical"
-        android:maxLines="7"
-        android:text="@string/avgWait"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_icons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/lblBobbyTitleHours"
-        app:layout_constraintTop_toBottomOf="@+id/lblBobbyTitleHours"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/bobby_lin_wait" />
 
     <LinearLayout
         android:id="@+id/bobby_lin_icons"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/bobby_lin_lblicons"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgBobbyTs"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblBobbyHoursOperation">
+        app:layout_constraintTop_toBottomOf="@+id/imgBobbyTs">
 
         <ImageButton
             android:id="@+id/btnCallBobby"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
             android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/call"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageButton
-            android:id="@+id/btnMapBobby"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/maps" />
-
-        <ImageButton
-            android:id="@+id/btnBobbyTimer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/timer" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bobby_lin_lblicons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+            android:scaleType="centerInside"
+            android:src="@drawable/call" />
 
         <TextView
             android:id="@+id/lblCallBobby"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/callBobby"
@@ -230,10 +136,19 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <ImageButton
+            android:id="@+id/btnMapBobby"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/maps" />
+
         <TextView
             android:id="@+id/lblMapBobby"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/maps"
@@ -241,16 +156,551 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <ImageButton
+            android:id="@+id/btnBobbyTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/timer" />
+
         <TextView
             android:id="@+id/lblBobbyTimer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/timer"
             android:textColor="#274F8B"
             android:textSize="18sp"
             android:textStyle="bold" />
+
     </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrlBobbyWaitTimes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bobby_lin_icons"
+        app:layout_constraintTop_toBottomOf="@+id/lblBobbyTitleHours">
+
+        <LinearLayout
+            android:id="@+id/bobby_lin_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_twelve_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby12AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelveAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby12AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_one_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby1AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/oneAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby1AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_two_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby2AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby2AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_three_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby3AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threeAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby3AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_four_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby4AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby4AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_five_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby5AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fiveAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby5AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_six_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby6AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby6AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_seven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby7AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby7AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_eight_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby8AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby8AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_nine_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby9AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nineAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby9AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_ten_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby10AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby10AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_eleven_am"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby11AM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenAM" />
+
+                <TextView
+                    android:id="@+id/lblBobby11AMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_twelve_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby12PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twelvePM" />
+
+                <TextView
+                    android:id="@+id/lblBobby12PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_one_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby1PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/onePM" />
+
+                <TextView
+                    android:id="@+id/lblBobby1PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_two_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby2PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/twoPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby2PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_three_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby3PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/threePM" />
+
+                <TextView
+                    android:id="@+id/lblBobby3PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_four_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby4PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fourPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby4PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_five_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby5PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fivePM" />
+
+                <TextView
+                    android:id="@+id/lblBobby5PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_six_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby6PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sixPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby6PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_seven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby7PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sevenPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby7PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_eight_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby8PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/eightPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby8PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_nine_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby9PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ninePM" />
+
+                <TextView
+                    android:id="@+id/lblBobby9PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_ten_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby10PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tenPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby10PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bobby_lin_eleven_pm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBobby11PM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/elevenPM" />
+
+                <TextView
+                    android:id="@+id/lblBobby11PMWait"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/defaultWait" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
