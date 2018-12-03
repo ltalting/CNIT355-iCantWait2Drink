@@ -36,6 +36,7 @@ public class BobbyTsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bobby_ts);
+        setTitle("iCantWait2Drink - Bobby T's");
 
         address = getString(R.string.bobbyAddr);
         phoneNumber = getString(R.string.BobbyTPhone);

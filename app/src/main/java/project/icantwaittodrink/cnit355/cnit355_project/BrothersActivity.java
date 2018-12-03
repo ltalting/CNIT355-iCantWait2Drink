@@ -32,6 +32,7 @@ public class BrothersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brothers);
+        setTitle("iCantWait2Drink - Brother's Bar");
 
         //Initaialize current values
         currentMins = findViewById(R.id.lblBrothersHours);

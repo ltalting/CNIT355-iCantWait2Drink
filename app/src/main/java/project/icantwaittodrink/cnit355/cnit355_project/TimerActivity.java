@@ -52,6 +52,7 @@ public class TimerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+        setTitle("iCantWait2Drink - Timer");
 
         Intent intent = getIntent();
         final String barName = intent.getStringExtra("bar");

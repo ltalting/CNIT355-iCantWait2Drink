@@ -31,6 +31,7 @@ public class HarrysActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_harrys);
+        setTitle("iCantWait2Drink - Harry's");
 
         //Initaialize current values
         currentMins = findViewById(R.id.lblHarrysHours);

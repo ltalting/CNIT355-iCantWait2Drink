@@ -30,6 +30,7 @@ public class WhereElseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where_else);
+        setTitle("iCantWait2Drink - Where Else");
 
         //Initaialize current values
         currentMins = findViewById(R.id.lblWhereElseHours);

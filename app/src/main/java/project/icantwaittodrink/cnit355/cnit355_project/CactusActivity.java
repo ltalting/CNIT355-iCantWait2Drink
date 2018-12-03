@@ -30,6 +30,7 @@ public class CactusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cactus);
+        setTitle("iCantWait2Drink - Neon Cactus");
 
         //Initaialize current values
         currentMins = findViewById(R.id.lblCactusHours);
