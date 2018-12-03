@@ -79,7 +79,7 @@ public class TimerActivity extends AppCompatActivity {
                 getDataForBar(barName, day, total);
                 String data = day + "  Bar: " + barName + "  Wait: Mins " + mins + " Seconds " + seconds;
 //                Toast.makeText(TimerActivity.this, data, Toast.LENGTH_SHORT).show();
-                finish();
+
             }
         });
 
@@ -131,7 +131,7 @@ public class TimerActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         DocumentSnapshot document = task.getResult();
                         if (document.exists()) {
-                            System.out.println(">>>>>> " + document.getData().get(dataTime));
+//                            System.out.println(">>>>>> " + document.getData().get(dataTime));
                             if (document.getData().get(dataTime) == null) {
                                 postNewData(barName, dataTime, seconds);
                             } else {
@@ -172,6 +172,7 @@ public class TimerActivity extends AppCompatActivity {
 
                         db.collection("bars").document(barName)
                                 .set(data2, SetOptions.merge());
+                        finish();
                     }
                 }
             }
@@ -192,6 +193,7 @@ public class TimerActivity extends AppCompatActivity {
 
         db.collection("bars").document(barName)
                 .set(data, SetOptions.merge());
+        finish();
     }
 
     public boolean barisOpen(String barName) {

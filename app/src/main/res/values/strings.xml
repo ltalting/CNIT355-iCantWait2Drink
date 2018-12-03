@@ -5,10 +5,10 @@
     <string name="bobbyAddr">308 W State St, West Lafayette, IN 47906</string>
     <string name="wait">Wait Time:</string>
     <string name="currentWait">Current Wait</string>
-    <string name="waitHours">0 hours</string>
+    <string name="waitHours">0 mins</string>
     <string name="hours">hours</string>
     <string name="mins">mins</string>
-    <string name="waitMins">0 mins</string>
+    <string name="waitMins">0 sec</string>
     <string name="brothersTitle">Brothers Bar &amp; Grill</string>
     <string name="brothersAddr">306 W State St, West Lafayette, IN 47906</string>
     <string name="brothersAddrTwoLines">306 W State St,\nWest Lafayette, IN 47906</string>
@@ -65,6 +65,6 @@
     <string name="ninePM">09:00PM</string>
     <string name="tenPM">10:00PM</string>
     <string name="elevenPM">11:00PM</string>
-    <string name="defaultWait">99 hours 99 mins</string>
+    <string name="defaultWait">99 mins 99 sec</string>
     
 </resources>
