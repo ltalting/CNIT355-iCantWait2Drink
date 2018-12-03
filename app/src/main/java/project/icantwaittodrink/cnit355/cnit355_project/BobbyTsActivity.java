@@ -109,7 +109,6 @@ public class BobbyTsActivity extends AppCompatActivity {
         getWaitTimes(day + " 21:00", (TextView) findViewById(R.id.lblBobby9PMWait));
         getWaitTimes(day + " 22:00", (TextView) findViewById(R.id.lblBobby10PMWait));
         getWaitTimes(day + " 23:00", (TextView) findViewById(R.id.lblBobby11PMWait));
-        getWaitTimes(day + " 24:00", (TextView) findViewById(R.id.lblBobby12PMWait));
         super.onResume();
     }
 
