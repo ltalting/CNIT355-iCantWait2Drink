@@ -3,12 +3,20 @@ package project.icantwaittodrink.cnit355.cnit355_project;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -20,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout bobbys_const, brothers_const, cactus_const, harrys_const, whereElse_const;
     ImageView bobbyClosed, bobbyOpen, brothersClosed, brothersOpen, cactusClosed, cactusOpen, harrysClosed, harrysOpen, whereElseClosed, whereElseOpen;
     Drawable closedFalse, closedTrue, openTrue, openFalse;
+    TextView bcm, bcs;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setTitle("iCantWait2Drink");
 
         // ASSIGN UI VARIABLES
+
+
 
         // ImageViews
         bobbyClosed = findViewById(R.id.imgBobbyClosed);
@@ -106,6 +121,67 @@ public class MainActivity extends AppCompatActivity {
         };
         openClose.start();
     }
+
+    @Override
+    protected void onResume() {
+        bcm = findViewById(R.id.lblCurBobbyHours);
+        bcs = findViewById(R.id.lblCurBobbyMins);
+        updateCurrentWaitTime(getTime(), "bobbyTs", bcm, bcs);
+        bcm = findViewById(R.id.lblCurBrothersHours);
+        bcs = findViewById(R.id.lblCurBrothersMins);
+        updateCurrentWaitTime(getTime(), "brothers", bcm, bcs);
+        bcm = findViewById(R.id.lblCurCactusHours);
+        bcs = findViewById(R.id.lblCurCactusMins);
+        updateCurrentWaitTime(getTime(), "cactus", bcm, bcs);
+        bcm = findViewById(R.id.lblCurHarrysHours);
+        bcs = findViewById(R.id.lblCurHarrysMins);
+        updateCurrentWaitTime(getTime(), "harrys", bcm, bcs);
+        bcm = findViewById(R.id.lblCurwhereElseHours);
+        bcs = findViewById(R.id.lblCurwhereElseMins);
+        updateCurrentWaitTime(getTime(), "whereElse", bcm, bcs);
+        super.onResume();
+    }
+
+    public void updateCurrentWaitTime(final String time, String barName, final TextView curmins, final TextView curseconds) {
+        DocumentReference docRef = db.collection("bars").document(barName);
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        if (document.getData().get(time) == null) {
+                            // no time...keep default time
+                        } else {
+                            // there is a time, update UI
+                            System.out.println(">>>> update real time value");
+                            int res = Integer.parseInt(document.getData().get(time).toString());
+
+                            int mins = res / 60;
+                            int seconds = res - (mins * 60);
+                            curmins.setText(Integer.toString(mins));
+                            curseconds.setText(Integer.toString(seconds));
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    public String getTime() {
+        Date date = new Date();
+        DateFormat formatter = new SimpleDateFormat("EEE HH:mm");
+        String dateStr = formatter.format(date);
+        String[] dateSplit = dateStr.split(":| ");
+        String dayOfWeek = dateSplit[0];
+        int hourOfDay = Integer.parseInt(dateSplit[1]);
+        int minOfDay = Integer.parseInt(dateSplit[2]);
+        if (minOfDay >= 30) {
+            hourOfDay++;
+        }
+        return dayOfWeek + " " + hourOfDay + ":00";
+    }
+
     public void updateUI(){
         Calendar calendar = Calendar.getInstance();
         // Get current day.

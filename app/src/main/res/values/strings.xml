@@ -6,8 +6,8 @@
     <string name="wait">Wait Time:</string>
     <string name="currentWait">Current Wait</string>
     <string name="waitHours">0 mins</string>
-    <string name="hours">hours</string>
-    <string name="mins">mins</string>
+    <string name="hours">mins</string>
+    <string name="mins">sec</string>
     <string name="waitMins">0 sec</string>
     <string name="brothersTitle">Brothers Bar &amp; Grill</string>
     <string name="brothersAddr">306 W State St, West Lafayette, IN 47906</string>
@@ -34,7 +34,7 @@
     <string name="cactusHours">Monday: Closed\nTuesday: Closed\nWednesday: Closed\nThursday: 8:00PM-3:00AM\nFriday: 8:00PM-3:00AM\nSaturday: 8:00PM-3:00AM\nSunday: Closed</string>
     <string name="harrysHours">Monday: 11:00AM-3:00AM\nTuesday: 11:00AM-3:00AM\nWednesday: 11:00AM-3:00AM\nThursday: 11:00AM-3:00AM\nFriday: 11:00AM-3:00AM\nSaturday: 11:00AM-3:00AM\nSunday: 12:00PM-3:00AM</string>
     <string name="whereElseHours">Monday: Closed\nTuesday: Closed\nWednesday: 12:00PM-3:00AM\nThursday: 12:00PM-3:00AM\nFriday: 12:00PM-3:00AM\nSaturday: 12:00PM-3:00AM\nSunday: Closed</string>
-    <string name="waitTimeTitle">Average Wait Times for XXXXXday</string>
+    <string name="waitTimeTitle">Average Wait Times for today</string>
     <string name="BobbyTPhone">3174031223</string>
     <string name="BrothersPhone">3174031223</string>
     <string name="CactusPhone">3174031223</string>

@@ -123,6 +123,7 @@
                 android:background="#24ffffff"
                 android:gravity="left"
                 android:text="@string/hours"
+                android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -133,6 +134,7 @@
                 android:background="#24ffffff"
                 android:gravity="right"
                 android:text="@string/mins"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 tools:layout_editor_absoluteX="347dp"
                 tools:layout_editor_absoluteY="60dp" />
@@ -303,6 +305,7 @@
                 android:background="#24ffffff"
                 android:gravity="left"
                 android:text="@string/hours"
+                android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -313,6 +316,7 @@
                 android:background="#24ffffff"
                 android:gravity="right"
                 android:text="@string/mins"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 tools:layout_editor_absoluteX="347dp"
                 tools:layout_editor_absoluteY="60dp" />
@@ -483,6 +487,7 @@
                 android:background="#24ffffff"
                 android:gravity="left"
                 android:text="@string/hours"
+                android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -493,6 +498,7 @@
                 android:background="#24ffffff"
                 android:gravity="right"
                 android:text="@string/mins"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 tools:layout_editor_absoluteX="347dp"
                 tools:layout_editor_absoluteY="60dp" />
@@ -663,6 +669,7 @@
                 android:background="#24ffffff"
                 android:gravity="left"
                 android:text="@string/hours"
+                android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -673,6 +680,7 @@
                 android:background="#24ffffff"
                 android:gravity="right"
                 android:text="@string/mins"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 tools:layout_editor_absoluteX="347dp"
                 tools:layout_editor_absoluteY="60dp" />
@@ -843,6 +851,7 @@
                 android:background="#24ffffff"
                 android:gravity="left"
                 android:text="@string/hours"
+                android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
             <TextView
@@ -853,6 +862,7 @@
                 android:background="#24ffffff"
                 android:gravity="right"
                 android:text="@string/mins"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 tools:layout_editor_absoluteX="347dp"
                 tools:layout_editor_absoluteY="60dp" />
