@@ -159,8 +159,8 @@ public class MainActivity extends AppCompatActivity {
 
                             int mins = res / 60;
                             int seconds = res - (mins * 60);
-                            curmins.setText(Integer.toString(mins));
-                            curseconds.setText(Integer.toString(seconds));
+                            curmins.setText(String.format("%02d", mins));
+                            curseconds.setText(String.format("%02d",seconds));
                         }
                     }
                 }
