@@ -67,7 +67,8 @@
                     android:id="@+id/lblHarrys12AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -88,7 +89,8 @@
                     android:id="@+id/lblHarrys1AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -109,7 +111,8 @@
                     android:id="@+id/lblHarrys2AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -130,7 +133,8 @@
                     android:id="@+id/lblHarrys3AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -151,7 +155,8 @@
                     android:id="@+id/lblHarrys4AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -172,7 +177,8 @@
                     android:id="@+id/lblHarrys5AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -193,7 +199,8 @@
                     android:id="@+id/lblHarrys6AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -214,7 +221,8 @@
                     android:id="@+id/lblHarrys7AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -235,7 +243,8 @@
                     android:id="@+id/lblHarrys8AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -256,7 +265,8 @@
                     android:id="@+id/lblHarrys9AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -277,7 +287,8 @@
                     android:id="@+id/lblHarrys10AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -298,7 +309,8 @@
                     android:id="@+id/lblHarrys11AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -319,7 +331,8 @@
                     android:id="@+id/lblHarrys12PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -340,7 +353,8 @@
                     android:id="@+id/lblHarrys1PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -361,7 +375,8 @@
                     android:id="@+id/lblHarrys2PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -382,7 +397,8 @@
                     android:id="@+id/lblHarrys3PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -403,7 +419,8 @@
                     android:id="@+id/lblHarrys4PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -424,7 +441,8 @@
                     android:id="@+id/lblHarrys5PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -445,7 +463,8 @@
                     android:id="@+id/lblHarrys6PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -466,7 +485,8 @@
                     android:id="@+id/lblHarrys7PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -487,7 +507,8 @@
                     android:id="@+id/lblHarrys8PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -508,7 +529,8 @@
                     android:id="@+id/lblHarrys9PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -529,7 +551,8 @@
                     android:id="@+id/lblHarrys10PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -550,7 +573,8 @@
                     android:id="@+id/lblHarrys11PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
         </LinearLayout>

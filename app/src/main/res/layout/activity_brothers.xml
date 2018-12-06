@@ -67,7 +67,8 @@
                     android:id="@+id/lblBrothers12AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -88,7 +89,8 @@
                     android:id="@+id/lblBrothers1AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -109,7 +111,8 @@
                     android:id="@+id/lblBrothers2AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -130,7 +133,8 @@
                     android:id="@+id/lblBrothers3AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -151,7 +155,8 @@
                     android:id="@+id/lblBrothers4AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -172,7 +177,8 @@
                     android:id="@+id/lblBrothers5AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -193,7 +199,8 @@
                     android:id="@+id/lblBrothers6AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -214,7 +221,8 @@
                     android:id="@+id/lblBrothers7AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -235,7 +243,8 @@
                     android:id="@+id/lblBrothers8AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -256,7 +265,8 @@
                     android:id="@+id/lblBrothers9AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -277,7 +287,8 @@
                     android:id="@+id/lblBrothers10AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -298,7 +309,8 @@
                     android:id="@+id/lblBrothers11AMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -319,7 +331,8 @@
                     android:id="@+id/lblBrothers12PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -340,7 +353,8 @@
                     android:id="@+id/lblBrothers1PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -361,7 +375,8 @@
                     android:id="@+id/lblBrothers2PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -382,7 +397,8 @@
                     android:id="@+id/lblBrothers3PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -403,7 +419,8 @@
                     android:id="@+id/lblBrothers4PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -424,7 +441,8 @@
                     android:id="@+id/lblBrothers5PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -445,7 +463,8 @@
                     android:id="@+id/lblBrothers6PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -466,7 +485,8 @@
                     android:id="@+id/lblBrothers7PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -487,7 +507,8 @@
                     android:id="@+id/lblBrothers8PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -508,7 +529,8 @@
                     android:id="@+id/lblBrothers9PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -529,7 +551,8 @@
                     android:id="@+id/lblBrothers10PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
 
@@ -550,7 +573,8 @@
                     android:id="@+id/lblBrothers11PMWait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
+                    android:gravity="end"
                     android:text="@string/defaultWait" />
             </LinearLayout>
         </LinearLayout>
@@ -664,7 +688,7 @@
             android:layout_weight="2"
             android:background="@android:color/white"
             android:gravity="center_horizontal|center"
-            android:text="0 mins"
+            android:text="@string/waitHours"
             android:textColor="@android:color/black"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBrothersWait"
@@ -678,7 +702,7 @@
             android:layout_weight="2"
             android:background="@android:color/white"
             android:gravity="center_horizontal|center"
-            android:text="0 sec"
+            android:text="@string/waitMins"
             android:textColor="@android:color/black"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/lblBrothersHoursOperation"
