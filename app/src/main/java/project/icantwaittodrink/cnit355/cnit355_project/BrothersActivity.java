@@ -165,9 +165,9 @@ public class BrothersActivity extends AppCompatActivity {
         String dayOfWeek = dateSplit[0];
         int hourOfDay = Integer.parseInt(dateSplit[1]);
         int minOfDay = Integer.parseInt(dateSplit[2]);
-        if (minOfDay >= 30) {
-            hourOfDay++;
-        }
+//        if (minOfDay >= 30) {
+//            hourOfDay++;
+//        }
         return dayOfWeek + " " + hourOfDay + ":00";
     }
 }
