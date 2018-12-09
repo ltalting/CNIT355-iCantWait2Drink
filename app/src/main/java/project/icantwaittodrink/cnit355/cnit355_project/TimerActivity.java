@@ -96,9 +96,9 @@ public class TimerActivity extends AppCompatActivity {
         String dayOfWeek = dateSplit[0];
         int hourOfDay = Integer.parseInt(dateSplit[1]);
         int minOfDay = Integer.parseInt(dateSplit[2]);
-        if (minOfDay >= 30) {
-            hourOfDay++;
-        }
+//        if (minOfDay >= 30) {
+//            hourOfDay++;
+//        }
         return dayOfWeek + " " + hourOfDay + ":00";
     }
 
@@ -147,7 +147,7 @@ public class TimerActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        int entries = 1;
+                        int entries = 2;
                         try {
                             entries = Integer.parseInt(document.getData().get("entries " + dataTime).toString());
                         } catch (Exception e) {
